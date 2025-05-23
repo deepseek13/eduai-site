@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>EDUAI 智能体助手</title>
+    <script>
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.indexOf('micromessenger') !== -1) {
+            window.location.href = 'wechat-tip.html';
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0a;
+            font-family: Arial, sans-serif;
+        }
+        .chat-container {
+            height: 100vh;
+            width: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe 
+        class="chat-container"
+        src="https://www.coze.cn/space/7498109701394186281/bot/7498665170580504612"
+        allow="clipboard-write; microphone">
+    </iframe>
+</body>
+</html>
