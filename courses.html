@@ -2,56 +2,54 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>AI课程中心 - EDUAI</title>
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #0a0a0a; color: #f4f4f4; padding: 40px; }
-        h1 { color: #FFD700; }
-        .chat-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #FFD700;
-            color: black;
-            border: none;
-            border-radius: 50px;
-            padding: 15px 25px;
-            font-size: 16px;
-            cursor: pointer;
-            z-index: 1000;
-        }
-        .chat-box {
-            display: none;
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            width: 300px;
-            background-color: #1a1a1a;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 15px #000;
-            z-index: 999;
-        }
-        .chat-box h3 { margin-top: 0; color: #FFD700; }
-        .chat-box p { font-size: 14px; line-height: 1.5; }
-    </style>
-    <script>
-        function toggleChat() {
-            var chatBox = document.getElementById("chatBox");
-            chatBox.style.display = chatBox.style.display === "block" ? "none" : "block";
-        }
-    </script>
+    <title>AI课程中心 - EDUAI 智慧教育</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global-style.css">
 </head>
 <body>
+
+<header>
+    <div style="font-size: 24px; color: #00ccff;">EDUAI 智慧教育</div>
+    <nav>
+        <a href="index.html">首页</a>
+        <a href="ai-teacher.html">数字人老师</a>
+        <a href="courses.html">课程中心</a>
+        <a href="cases.html">合作案例</a>
+        <a href="about.html">关于我们</a>
+        <a href="contact.html">联系我们</a>
+    </nav>
+</header>
+
+<section>
     <h1>AI课程中心</h1>
-    <p>我们提供适用于不同阶段的AI课程，包括小学启蒙、初中逻辑、教师提升班。</p>
+    <p>EDUAI 提供覆盖小学、初中与教师发展的三大 AI 素养课程体系，全面激发教育创新力。</p>
+</section>
 
-    <button class="chat-button" onclick="toggleChat()">AI小助手</button>
+<section>
+    <h2>课程模块</h2>
 
-    <div class="chat-box" id="chatBox">
-        <h3>AI小助手</h3>
-        <p><strong>Q：</strong>你们的课程适合谁？<br><strong>A：</strong>我们为小学、初中教师和学生分别定制AI课程。</p>
-        <p><strong>Q：</strong>数字人老师支持哪些学科？<br><strong>A：</strong>目前支持语文、数学、英语，后续将扩展至更多学科。</p>
-        <p><strong>Q：</strong>课程是否可以免费试用？<br><strong>A：</strong>合作学校可申请一对一免费体验。</p>
+    <div class="card" style="max-width: 800px; margin: 20px auto;">
+        <h3 style="color: #00ccff;">小学 AI 启蒙课</h3>
+        <p>适合1~6年级，内容包含AI常识、图形化编程、逻辑游戏，激发学生兴趣与创造力。</p>
+        <a href="contact.html" class="cta-button">申请试用</a>
     </div>
+
+    <div class="card" style="max-width: 800px; margin: 20px auto;">
+        <h3 style="color: #00ccff;">初中 AI 实践课</h3>
+        <p>围绕语数理融合开展 Python、图像识别、AI对话训练，打造学科融合项目式学习。</p>
+        <a href="contact.html" class="cta-button">下载课程大纲</a>
+    </div>
+
+    <div class="card" style="max-width: 800px; margin: 20px auto;">
+        <h3 style="color: #00ccff;">教师 AI 教学力提升课</h3>
+        <p>基于GPT、Coze平台，培训教师掌握 AI 课件生成、个性答疑、教案改写、数据分析等新能力。</p>
+        <a href="contact.html" class="cta-button">定制机构培训方案</a>
+    </div>
+</section>
+
+<footer>
+    © 2025 EDUAI 智慧教育 · 面向未来的课堂，从AI素养开始
+</footer>
+
 </body>
 </html>

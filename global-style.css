@@ -1,0 +1,56 @@
+/* global-style.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(to bottom, #0a0a23, #1a1a40);
+    color: #f4f4f4;
+}
+header {
+    background-color: #111436;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav a {
+    margin-left: 20px;
+    color: #f4f4f4;
+    text-decoration: none;
+    font-weight: bold;
+}
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+section h1, section h2 {
+    color: #00ccff;
+}
+section p {
+    color: #c0c7e6;
+    font-size: 16px;
+}
+.cta-button {
+    background: #00ccff;
+    color: #000;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+.card {
+    background-color: #1f2235;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,255,255,0.1);
+    padding: 20px;
+}
+footer {
+    background: #111436;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+}
