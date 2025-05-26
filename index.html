@@ -1,54 +1,25 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ReHuman 研究院</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div id="loader" class="loader">
-    <img src="/assets/zhe-logo.svg" alt="Logo" class="logo-spin" />
-    <p>ReHuman 启动中...</p>
-  </div>
-
-  <video id="bgVideo" autoplay muted loop playsinline poster="/poster.jpg">
-    <source src="/ReHuman.mp4" type="video/mp4" />
-  </video>
-
-  <button id="soundToggle" class="sound-toggle">🔇</button>
-
-  <header class="site-header">
-    <div class="container">
-      <div class="logo">
-        <img src="/assets/zhe-logo.svg" alt="ReHuman研究院 Logo" />
-      </div>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#">首页</a></li>
-          <li><a href="courses.html">未来七门课</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container hero">
-    <h1>欢迎来到 ReHuman 研究院</h1>
-    <p>AI时代下的人类学习、思考与共生</p>
-    <a href="courses.html" class="btn-primary">探索七门未来课程</a>
-  </main>
-
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ReHuman</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="poster"></div>
+<header class="site-header">
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
+  <div class="logo"><img src="assets/zhe-logo.svg" alt="Logo"/></div>
+  <nav class="main-nav"><ul>
+    <li><a href="index.html">首页</a></li>
+    <li><a href="courses.html">七门课</a></li>
+    <li><a href="lab.html">实验室</a></li>
+    <li><a href="family.html">家长营</a></li>
+    <li><a href="tools.html">工具</a></li>
+    <li><a href="enroll.html">报名</a></li>
+    <li><a href="partners.html">灯塔</a></li>
+    <li><a href="about.html">关于</a></li>
+  </ul></nav>
+</header>
+<main class="container"><h1>欢迎来到 ReHuman 研究院</h1><p>AI时代的学习、思考与共生</p><a href='courses.html'>探索课程</a></main>
 <script>
-  window.onload = function () {
-    document.getElementById('loader').style.display = 'none';
-  };
-
-  const toggleBtn = document.getElementById('soundToggle');
-  const video = document.getElementById('bgVideo');
-  toggleBtn.onclick = function () {
-    video.muted = !video.muted;
-    toggleBtn.innerText = video.muted ? '🔇' : '🔊';
-  };
+function toggleMenu() {
+  document.querySelector('.main-nav').classList.toggle('open');
+}
 </script>
-</body>
-</html>
+</body></html>

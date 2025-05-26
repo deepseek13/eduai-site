@@ -1,31 +1,25 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>关于我们 · ReHuman</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ReHuman</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="poster"></div>
 <header class="site-header">
-  <div class="container">
-    <div class="logo"><img src="/assets/zhe-logo.svg" alt="Logo" /></div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">返回首页</a></li>
-      </ul>
-    </nav>
-  </div>
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
+  <div class="logo"><img src="assets/zhe-logo.svg" alt="Logo"/></div>
+  <nav class="main-nav"><ul>
+    <li><a href="index.html">首页</a></li>
+    <li><a href="courses.html">七门课</a></li>
+    <li><a href="lab.html">实验室</a></li>
+    <li><a href="family.html">家长营</a></li>
+    <li><a href="tools.html">工具</a></li>
+    <li><a href="enroll.html">报名</a></li>
+    <li><a href="partners.html">灯塔</a></li>
+    <li><a href="about.html">关于</a></li>
+  </ul></nav>
 </header>
-<main class="container">
-  <h1>关于我们</h1>
-  <p>ReHuman 研究院致力于在AI浪潮中重新唤醒“人”的独特性与未来方向。</p>
-  <h3>我们的使命</h3>
-  <p>让每一位孩子、家长、老师都能与AI共生，但不被其控制。</p>
-  <h3>创始人宣言</h3>
-  <blockquote>“我们不是为了赢AI，而是为了不变成AI。”</blockquote>
-  <h3>联系</h3>
-  <p>联系人：欧阳明 ｜ 邮箱：AIprof@163.com</p>
-</main>
-</body>
-</html>
+<main class="container"><h1>关于我们</h1><p>使命：不变成AI</p></main>
+<script>
+function toggleMenu() {
+  document.querySelector('.main-nav').classList.toggle('open');
+}
+</script>
+</body></html>

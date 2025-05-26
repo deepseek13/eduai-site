@@ -1,42 +1,25 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI 实验室 · ReHuman</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ReHuman</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="poster"></div>
 <header class="site-header">
-  <div class="container">
-    <div class="logo"><img src="/assets/zhe-logo.svg" alt="Logo" /></div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">返回首页</a></li>
-      </ul>
-    </nav>
-  </div>
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
+  <div class="logo"><img src="assets/zhe-logo.svg" alt="Logo"/></div>
+  <nav class="main-nav"><ul>
+    <li><a href="index.html">首页</a></li>
+    <li><a href="courses.html">七门课</a></li>
+    <li><a href="lab.html">实验室</a></li>
+    <li><a href="family.html">家长营</a></li>
+    <li><a href="tools.html">工具</a></li>
+    <li><a href="enroll.html">报名</a></li>
+    <li><a href="partners.html">灯塔</a></li>
+    <li><a href="about.html">关于</a></li>
+  </ul></nav>
 </header>
-<main class="container">
-  <h1>AI 实验室</h1>
-  <p style="margin:20px 0;">在这里，我们与AI共创、共思、共问。</p>
-  <h3>🔍 提问生成器</h3>
-  <input type="text" id="questionInput" placeholder="输入一个关键词" />
-  <button onclick="generate()">生成问题</button>
-  <ul id="output"></ul>
-  <script>
-    function generate() {
-      const key = document.getElementById('questionInput').value;
-      const qs = [
-        `如果${key}消失了，世界会怎样？`,
-        `AI理解${key}的方式和人类一样吗？`,
-        `我们为何要在AI时代重新定义${key}？`,
-        `你能否用${key}讲一个反转的故事？`,
-        `假如${key}只能用图像表达，你怎么呈现？`
-      ];
-      document.getElementById('output').innerHTML = qs.map(q => '<li>' + q + '</li>').join('');
-    }
-  </script>
-</main>
-</body>
-</html>
+<main class="container"><h1>AI 实验室</h1><p>提问生成器 Demo</p></main>
+<script>
+function toggleMenu() {
+  document.querySelector('.main-nav').classList.toggle('open');
+}
+</script>
+</body></html>

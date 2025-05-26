@@ -1,18 +1,25 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI 工具推荐清单 · ReHuman</title><link rel="stylesheet" href="style.css" /></head>
-<body>
-<header class="site-header"><div class="container">
-  <div class="logo"><img src="/assets/zhe-logo.svg" alt="Logo" /></div>
-  <nav class="main-nav"><ul><li><a href="index.html">返回首页</a></li></ul></nav>
-</div></header>
-<main class="container">
-  <h1>AI 工具推荐清单</h1>
-  <div class="course-grid">
-    <div class="course-card"><h3>ChatGPT</h3><p>多语言对话、写作、提问生成。</p><a href="https://chat.openai.com" target="_blank">打开</a></div>
-    <div class="course-card"><h3>Notion AI</h3><p>笔记、文档、思维整理利器。</p><a href="https://www.notion.so/product/ai" target="_blank">打开</a></div>
-    <div class="course-card"><h3>Kimi</h3><p>超长文本阅读、文献处理。</p><a href="https://kimi.moonshot.cn" target="_blank">打开</a></div>
-    <div class="course-card"><h3>Gamma</h3><p>AI 自动生成演示文稿与课程讲义。</p><a href="https://gamma.app" target="_blank">打开</a></div>
-  </div>
-</main></body></html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ReHuman</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="poster"></div>
+<header class="site-header">
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
+  <div class="logo"><img src="assets/zhe-logo.svg" alt="Logo"/></div>
+  <nav class="main-nav"><ul>
+    <li><a href="index.html">首页</a></li>
+    <li><a href="courses.html">七门课</a></li>
+    <li><a href="lab.html">实验室</a></li>
+    <li><a href="family.html">家长营</a></li>
+    <li><a href="tools.html">工具</a></li>
+    <li><a href="enroll.html">报名</a></li>
+    <li><a href="partners.html">灯塔</a></li>
+    <li><a href="about.html">关于</a></li>
+  </ul></nav>
+</header>
+<main class="container"><h1>AI 工具推荐</h1><p>ChatGPT, Notion AI...</p></main>
+<script>
+function toggleMenu() {
+  document.querySelector('.main-nav').classList.toggle('open');
+}
+</script>
+</body></html>
