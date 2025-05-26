@@ -1,55 +1,44 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {font-family: "Open Sans", sans-serif; background-color: #1E2A47; color: #F5F2EA;}
+a {text-decoration: none; color: inherit;}
+.container {max-width: 1200px; margin: 0 auto; padding: 16px;}
+.site-header {position: sticky; top: 0; background: rgba(30,42,71,0.85); z-index: 10; padding: 16px 0;}
+.site-header .container {display: flex; justify-content: space-between; align-items: center;}
+.site-header .logo img {height: 40px;}
+.main-nav ul {list-style: none; display: flex; gap: 20px;}
+.main-nav li a {color: #F5F2EA; font-weight: 500;}
+.hero {text-align: center; padding: 80px 0;}
+.btn-primary {padding: 12px 24px; background: #4BD1C9; color: #1E2A47; border-radius: 6px; display: inline-block; margin-top: 24px;}
+video {position: fixed; top: 0; left: 0; min-width: 100%; min-height: 100%; object-fit: cover; z-index: -1;}
+.sound-toggle {position: fixed; bottom: 16px; right: 16px; background: rgba(0,0,0,0.5); border: none; color: white; font-size: 20px; padding: 10px; border-radius: 50%; z-index: 50;}
+.loader {position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #1E2A47; color: #F5F2EA; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 100;}
+.logo-spin {width: 60px; animation: spin 2s linear infinite;}
+@keyframes spin {100% {transform: rotate(360deg);}}
+.course-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 64px;}
+.course-card {background: rgba(245, 242, 234, 0.05); border: 1px solid #4BD1C9; border-radius: 12px; padding: 24px;}
+.course-card:hover {background: rgba(245, 242, 234, 0.12);}
+.course-card h3 {margin-bottom: 12px; color: #4BD1C9;}
 
-body, html {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  font-family: -apple-system, sans-serif;
+
+.mobile-friendly {
+  background: url('/poster.jpg') center center / cover no-repeat fixed;
 }
-.hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
-.hero .bg {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  display: block;
-}
-.play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 72px;
-  color: white;
-  cursor: pointer;
-  opacity: 0.8;
-  text-shadow: 0 0 10px black;
-}
-.video-overlay {
-  display: none;
-  position: fixed;
-  z-index: 10;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.95);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.video-overlay video {
-  max-width: 90%;
-  max-height: 80vh;
-}
-.video-overlay button {
-  margin-top: 20px;
-  padding: 10px 20px;
+
+/* 提升交互按钮可点击范围与对比度 */
+button, a.btn-primary, .sound-toggle {
   font-size: 18px;
-  background: #2dd4bf;
-  border: none;
-  color: black;
-  border-radius: 6px;
-  cursor: pointer;
+  padding: 14px 28px;
+  border-radius: 10px;
+}
+
+/* 导航在手机上堆叠展示 */
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .site-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
