@@ -2,74 +2,53 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ReHuman 研究院</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- 视频背景区 -->
-  <video autoplay muted loop playsinline style="position: fixed; top: 0; left: 0; min-width: 100%; min-height: 100%; object-fit: cover; z-index: -1;">
-    <source src="assets/ReHuman.mp4" type="video/mp4">
-    您的浏览器不支持 HTML5 视频。
+  <div id="loader" class="loader">
+    <img src="/assets/zhe-logo.svg" alt="Logo" class="logo-spin" />
+    <p>ReHuman 启动中...</p>
+  </div>
+
+  <video id="bgVideo" autoplay muted loop playsinline poster="/poster.jpg">
+    <source src="/ReHuman.mp4" type="video/mp4" />
   </video>
 
-  <!-- 内容区域 -->
-  <header class="site-header" style="background: rgba(30,42,71,0.8);">
+  <button id="soundToggle" class="sound-toggle">🔇</button>
+
+  <header class="site-header">
     <div class="container">
       <div class="logo">
-        <img src="assets/zhe-logo.svg" alt="ReHuman研究院 Logo" />
+        <img src="/assets/zhe-logo.svg" alt="ReHuman研究院 Logo" />
       </div>
       <nav class="main-nav">
         <ul>
           <li><a href="#">首页</a></li>
-          <li><a href="#">未来七门课</a></li>
-          <li><a href="#">共学实验室</a></li>
-          <li><a href="#">家庭协同</a></li>
-          <li><a href="#">教师行动</a></li>
-          <li><a href="#">思维文章</a></li>
-          <li><a href="#">关于我们</a></li>
+          <li><a href="courses.html">未来七门课</a></li>
         </ul>
       </nav>
-      <div class="user-actions">
-        <a class="btn btn-outline" href="#">登录</a>
-        <a class="btn btn-primary" href="#">注册</a>
-      </div>
     </div>
   </header>
 
-  <main class="container" style="min-height: 60vh; padding: 40px 0;">
-    <h1 style="color: #F5F2EA;">欢迎来到 ReHuman 研究院</h1>
-    <p style="color: #F5F2EA;">我们致力于探索 AI 时代下的人类学习、思考与共生。</p>
+  <main class="container hero">
+    <h1>欢迎来到 ReHuman 研究院</h1>
+    <p>AI时代下的人类学习、思考与共生</p>
+    <a href="courses.html" class="btn-primary">探索七门未来课程</a>
   </main>
 
-  <footer class="site-footer">
-    <div class="container grid">
-      <div>
-        <h4>联系我们</h4>
-        <p>联系人：欧阳明</p>
-        <p>电话：137-8909-3111</p>
-        <p>邮箱：AIprof@163.com</p>
-      </div>
-      <div>
-        <h4>快速链接</h4>
-        <ul>
-          <li><a href="#">隐私政策</a></li>
-          <li><a href="#">使用条款</a></li>
-          <li><a href="#">技术支持</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>关注我们</h4>
-        <div class="social-icons" style="display:flex; gap:16px;">
-          <a href="#"><img src="assets/icon-wechat.svg" alt="微信" /></a>
-          <a href="#"><img src="assets/icon-linkedin.svg" alt="LinkedIn" /></a>
-          <a href="#"><img src="assets/icon-twitter.svg" alt="Twitter" /></a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      © 2025 ReHuman研究院 版权所有
-    </div>
-  </footer>
+<script>
+  window.onload = function () {
+    document.getElementById('loader').style.display = 'none';
+  };
+
+  const toggleBtn = document.getElementById('soundToggle');
+  const video = document.getElementById('bgVideo');
+  toggleBtn.onclick = function () {
+    video.muted = !video.muted;
+    toggleBtn.innerText = video.muted ? '🔇' : '🔊';
+  };
+</script>
 </body>
 </html>
