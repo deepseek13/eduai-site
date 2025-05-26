@@ -7,8 +7,14 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
+  <!-- 视频背景区 -->
+  <video autoplay muted loop playsinline style="position: fixed; top: 0; left: 0; min-width: 100%; min-height: 100%; object-fit: cover; z-index: -1;">
+    <source src="assets/ReHuman.mp4" type="video/mp4">
+    您的浏览器不支持 HTML5 视频。
+  </video>
+
+  <!-- 内容区域 -->
+  <header class="site-header" style="background: rgba(30,42,71,0.8);">
     <div class="container">
       <div class="logo">
         <img src="assets/zhe-logo.svg" alt="ReHuman研究院 Logo" />
@@ -31,12 +37,11 @@
     </div>
   </header>
 
-  <!-- 主体内容占位 -->
   <main class="container" style="min-height: 60vh; padding: 40px 0;">
-    <!-- 在这里填充各板块内容 -->
+    <h1 style="color: #F5F2EA;">欢迎来到 ReHuman 研究院</h1>
+    <p style="color: #F5F2EA;">我们致力于探索 AI 时代下的人类学习、思考与共生。</p>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container grid">
       <div>
