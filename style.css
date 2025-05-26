@@ -18,27 +18,3 @@ video {position: fixed; top: 0; left: 0; min-width: 100%; min-height: 100%; obje
 .course-card {background: rgba(245, 242, 234, 0.05); border: 1px solid #4BD1C9; border-radius: 12px; padding: 24px;}
 .course-card:hover {background: rgba(245, 242, 234, 0.12);}
 .course-card h3 {margin-bottom: 12px; color: #4BD1C9;}
-
-
-.mobile-friendly {
-  background: url('/poster.jpg') center center / cover no-repeat fixed;
-}
-
-/* 提升交互按钮可点击范围与对比度 */
-button, a.btn-primary, .sound-toggle {
-  font-size: 18px;
-  padding: 14px 28px;
-  border-radius: 10px;
-}
-
-/* 导航在手机上堆叠展示 */
-@media (max-width: 768px) {
-  .main-nav ul {
-    flex-direction: column;
-    gap: 12px;
-  }
-  .site-header .container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
