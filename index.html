@@ -47,7 +47,6 @@
     toggleBtn.innerText = video.muted ? '🔇' : '🔊';
   };
 </script>
-
 <style>
 #video-button {
   position: fixed;
@@ -79,7 +78,7 @@
   🔊
 </div>
 <div id="video-popup" onclick="this.style.display='none'">
-<video autoplay="" controls="" src="public/ReHuman.mp4"></video>
+<video autoplay="" controls="" muted="" playsinline="" src="./public/ReHuman.mp4">抱歉，您的浏览器无法播放此视频。</video>
 </div>
 </body>
 </html>
